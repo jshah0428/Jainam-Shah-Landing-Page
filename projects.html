@@ -1,264 +1,278 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jainam Shah - Software Engineer</title>
-		<link rel="icon" type="image/jpg" href="images/j.jpg">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jainam Shah - Software Engineer</title>
+  <link rel="icon" type="image/jpg" href="images/j.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="assets/css/sketchbook.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="canvas page">
+    <header class="site-nav">
+      <div class="wrap-wide site-nav-inner">
+        <a class="brand" href="index.html">Jainam Shah</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+          <span></span>
+        </button>
+        <nav id="site-menu" aria-label="Primary">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="index.html">About Me</a></li>
+            <li><a class="nav-link" href="experiences.html">Experiences</a></li>
+            <li><a class="nav-link is-active" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="resume.html">Resume</a></li>
+          </ul>
+          <ul class="nav-socials">
+            <li><a href="https://www.instagram.com/j.shah28/" class="fab fa-instagram" aria-label="Instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://github.com/jshah0428" class="fab fa-github" aria-label="GitHub"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/jainamshah0428/" class="fab fa-linkedin" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
+            <li><a href="mailto:jainamshah0428@gmail.com" class="fas fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <main id="main">
+      <section class="hero wrap">
+        <p class="kicker">02 / Projects</p>
+        <h1 class="display display-lg">Systems from<br />the sketchbook.</h1>
+        <p class="lede">Each project is a page from the notebook: problem, stack, architecture, and the original write-up.</p>
+      </section>
 
-				<!-- Header -->
-					<header id="header">
-						<!-- <a href="index.html" class="logo">Massively</a> -->
-					</header>
+      <section class="section">
+        <div class="wrap">
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul class="links">
-						<li><a href="index.html">About Me</a></li>
-						<li><a href="experiences.html">Experiences</a></li>
-						<li class="active"><a href="projects.html">Projects</a></li>
-						<li class=""><a href = "resume.html">Resume</a></li>
+          <article class="project" data-accent="cobalt" id="paypark">
+            <div class="project-media">
+              <img src="images/Screenshot 2025-10-07 at 2.11.59 AM.png" alt="PayPark" />
+            </div>
+            <div>
+              <p class="chapter-id">PR. 01</p>
+              <h2><a href="https://github.com/jshah0428/PayPark">PayPark</a></h2>
+              <div class="schematic">
+                <p class="schematic-label">Note // architecture</p>
+                <div class="flow">
+                  <span class="node">Next.js</span>
+                  <span class="node">Express</span>
+                  <span class="node">FastAPI</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node node-fill">PrismaDB</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node">XRPLedger</span>
+                </div>
+                <div class="flow" style="margin-top:0.55rem">
+                  <span class="node">TomTom API</span>
+                  <span class="node">RLUSD</span>
+                  <span class="node">Wallet / Session</span>
+                </div>
+              </div>
+              <div class="prose">
+                <p>PayPark is a blockchain-integrated parking platform built with Next.js, Express, FastAPI, and PrismaDB, leveraging the XRPLedger (RLUSD) for on-chain parking payments. It integrates TomTom API for real-time parking data, supports automated RLUSD issuance, and enables synchronized wallet and session management. This cuts out credit card fees, allows for flexible parking options (pay by minute rather then by hour), and settles payments much quicker</p>
+              </div>
+              <ul class="stack">
+                <li>Next.js</li>
+                <li>Express</li>
+                <li>FastAPI</li>
+                <li>PrismaDB</li>
+                <li>XRPLedger</li>
+                <li>TomTom API</li>
+              </ul>
+            </div>
+          </article>
 
-					</ul>
-					<ul class="icons">
-							
-						<li><a href="https://www.instagram.com/j.shah28/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/jshah0428" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/jainamshah0428/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="mailto:jainamshah0428@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					
-				</ul>
-				</nav>
+          <article class="project" data-accent="violet" id="canvas-companion">
+            <div class="project-media">
+              <img src="images/canvas.png" alt="Canvas Companion" />
+            </div>
+            <div>
+              <p class="chapter-id">PR. 02</p>
+              <h2><a href="https://github.com/jshah0428/Canvas_Companion">Canvas Companion</a></h2>
+              <div class="schematic">
+                <p class="schematic-label">Note // architecture</p>
+                <div class="flow">
+                  <span class="node">Next.js</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node node-fill">FastAPI</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node">SmallBalloon</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node">Smalltalk</span>
+                </div>
+              </div>
+              <div class="prose">
+                <p>Canvas Assistant integrates Smalltalk with a Next.js and FastAPI architecture to process and visualize student analytics. It uses a JavaScript–Smalltalk bridge powered by the SmallBalloon interpreter for real-time data computation and visualization, featuring an interactive Smalltalk code runner and automatic fallback to mock data for reliability.</p>
+              </div>
+              <ul class="stack">
+                <li>Next.js</li>
+                <li>FastAPI</li>
+                <li>Smalltalk</li>
+                <li>SmallBalloon</li>
+              </ul>
+            </div>
+          </article>
 
-				<!-- Main -->
-					<div id="main">
+          <article class="project" data-accent="lime" id="stocksearch">
+            <div class="project-media">
+              <img src="images/graph.jpg" alt="StockSearch" />
+            </div>
+            <div>
+              <p class="chapter-id">PR. 03</p>
+              <h2><a href="https://github.com/jshah0428/stock-market-analyzer">StockSearch</a></h2>
+              <div class="schematic">
+                <p class="schematic-label">Note // architecture</p>
+                <div class="flow">
+                  <span class="node">Profile</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node node-fill">Buy / Sell</span>
+                  <span class="node">Holdings</span>
+                  <span class="node">Deposit</span>
+                  <span class="node">News</span>
+                </div>
+              </div>
+              <div class="prose">
+                <p>This project provides real-time and historical stock prices, ensuring users have the most up-to-date information. Each user is connected to a unique profile, which allows them to buy and sell stocks, view their stock holdings, and deposit money seamlessly. Additionally, the platform delivers news relevant to users' stock holdings, empowering them to make informed stock actions.</p>
+              </div>
+            </div>
+          </article>
 
-						<div id = "projects">
-							<h1>Projects</h1>
-						</div>
-							<section id = "posts" class="posts">
-								<article>
-									
-									<header>
-										
-										<h2><a href="https://github.com/jshah0428/PayPark">PayPark<br /></h2>
-									</header>
-									<a href="#" class="image fit">
-										<img src="images/Screenshot 2025-10-07 at 2.11.59 AM.png" alt="smark" style="width: 80%; height: auto; display: block; margin: 0 auto;" />
-									  </a>								
-									<p id = "explanation"> 
-										PayPark is a blockchain-integrated parking platform built with Next.js, 
-										Express, FastAPI, and PrismaDB, leveraging the XRPLedger (RLUSD) for 
-										on-chain parking payments. It integrates TomTom API for real-time parking data, 
-										supports automated RLUSD issuance, and enables synchronized wallet and 
-										session management. This cuts out credit card fees, allows for flexible parking options
-										(pay by minute rather then by hour), and settles payments much quicker</p>
-									</p>
-										
+          <article class="project" data-accent="tangerine" id="sentistock">
+            <div class="project-media">
+              <img src="images/buy_sell.jpg" alt="SentiStock" />
+            </div>
+            <div>
+              <p class="chapter-id">PR. 04</p>
+              <h2><a href="https://github.com/jshah0428/SentiStock">SentiStock</a></h2>
+              <div class="schematic">
+                <p class="schematic-label">Note // architecture</p>
+                <div class="flow">
+                  <span class="node">Financial News</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node">Summarize</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node node-fill">Sentiment</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node">Buy / Hold / Sell</span>
+                </div>
+              </div>
+              <div class="prose">
+                <p>SentiStock helps investors make informed decisions with AI-driven sentiment analysis. It retrieves financial news, summarizes it, and then passes it through a sentiment analyzer which provides clear buy/hold/sell recommendations with its reasons for making that decision. Built with Flask, Hugging Face models, and APIs like SerpAPI and DiffBot, it ensures transparency and accessibility.</p>
+              </div>
+              <ul class="stack">
+                <li>Flask</li>
+                <li>Hugging Face</li>
+                <li>SerpAPI</li>
+                <li>DiffBot</li>
+              </ul>
+            </div>
+          </article>
 
-										
-							
-								</article>
-								<article>
-									
-									<header>
-										
-										<h2><a href="https://github.com/jshah0428/Canvas_Companion">Canvas Companion<br /></h2>
-									</header>
-									<a href="#" class="image fit">
-										<img src="images/canvas.png" alt="smark" style="width: 70%; height: auto; display: block; margin: 0px auto 0 auto;" />
-									  </a>								
-									<p id = "explanation"> 
-									
-										Canvas Assistant integrates Smalltalk with a Next.js and FastAPI architecture to process and 
-										visualize student analytics. It uses a JavaScript–Smalltalk bridge powered by the SmallBalloon interpreter 
-										for real-time data computation and visualization, featuring an interactive Smalltalk code runner 
-										and automatic fallback to mock data for reliability.</p>
-										
-										
+          <article class="project" data-accent="cyan" id="wastefree">
+            <div class="project-media">
+              <img src="images/foodwaste.webp" alt="WasteFree" />
+            </div>
+            <div>
+              <p class="chapter-id">PR. 05</p>
+              <h2><a href="https://github.com/jshah0428/Wastefree">WasteFree</a></h2>
+              <div class="schematic">
+                <p class="schematic-label">Note // architecture</p>
+                <div class="flow">
+                  <span class="node">Receipt Scanner</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node node-fill">Virtual Pantry</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node">Expiration Alerts</span>
+                  <span class="node">Recipes</span>
+                </div>
+              </div>
+              <div class="prose">
+                <p>Wastefree helps reduce food waste by tracking pantry items and suggesting ways to use them efficiently. Using receipt data with our receipt scanner, it monitors expiration dates along with unit economics with our virual pantry management feature, and provides popular, tailored meal ideas to minimize waste. Built with Kivy, Python, SQLite, and Mindee’s OCR, it features a receipt scanner, manual item management, expiration alerts, and recipe suggestions. By promoting sustainability and smarter food use, Wastefree benefits both users and the planet.</p>
+              </div>
+              <ul class="stack">
+                <li>Kivy</li>
+                <li>Python</li>
+                <li>SQLite</li>
+                <li>Mindee’s OCR</li>
+              </ul>
+            </div>
+          </article>
 
-										
-							
-								</article>
-								
-								<article>
-									
-									<header>
-										
-										<h2><a href="https://github.com/jshah0428/stock-market-analyzer">StockSearch<br /></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/graph.jpg" alt="smark" /></a>
-									
-									<p id = "explanation"> 
-									
-										This project provides real-time and historical stock prices, 
-										ensuring users have the most up-to-date information. Each user is connected to a unique profile, 
-										which allows them to buy and sell stocks, view their stock holdings, and deposit money seamlessly.
-										Additionally, the platform delivers news relevant to users' stock holdings, empowering them to make 
-										informed stock actions.</p>
-										
+          <article class="project" data-accent="magenta" id="groovesync">
+            <div class="project-media">
+              <img src="images/discoball.jpg" alt="GrooveSync" />
+            </div>
+            <div>
+              <p class="chapter-id">PR. 06</p>
+              <h2><a href="https://github.com/jshah0428/GrooveSync">GrooveSync</a></h2>
+              <div class="schematic">
+                <p class="schematic-label">Note // architecture</p>
+                <div class="flow">
+                  <span class="node">DiscoAI</span>
+                  <span class="node">Adventure Game</span>
+                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
+                  <span class="node node-fill">MongoDB Atlas</span>
+                  <span class="node">Spotify API</span>
+                </div>
+              </div>
+              <div class="prose">
+                <p>Groove Sync introduces users to the disco era through an interactive, vibrant UI, educational content, and engaging features. It includes a DiscoAI chatbot, a choose-your-own-adventure game, and Spotify integration for seamless music exploration. Built with MongoDB Atlas and the Spotify API, Groove Sync blends history, storytelling, and AI to enhance music literacy and user engagement.</p>
+              </div>
+              <ul class="stack">
+                <li>MongoDB Atlas</li>
+                <li>Spotify API</li>
+                <li>DiscoAI</li>
+              </ul>
+            </div>
+          </article>
 
-										
-							
-								</article>
-								<article>
-									<header>
-										
-										<h2 id = "OCC"></a><a href="https://github.com/jshah0428/SentiStock">SentiStock<br /></a></h2>
-										
-									</header>
-									<a href="#" id ="bdal_picture" class="image fit"><img src="images/buy_sell.jpg" alt="" /></a>
-									<style>
-										#bdal_picture{
-											display: inline-block;
-											margin-top: 15px;
-											width: 80%;
-											height: auto;
-										}
-									</style>
-									
-									<!-- <p id = "explanation">Flask, Django</p> -->
-									<!-- <p id = "explanation"> This project features a fictitious outdoor clothing 
-										store where users can browse a diverse selection of items. Managers have the 
-										ability to effortlessly add or delete items, handle shipments, and manage inventory.</p> -->
+        </div>
+      </section>
+    </main>
 
-										<p id = "explanation"> 
-									
-											SentiStock helps investors make informed decisions with AI-driven sentiment analysis. 
-											It retrieves financial news, summarizes it, and then passes it through a sentiment
-											analyzer which provides clear buy/hold/sell recommendations with its reasons for making that decision. 
-											Built with Flask, Hugging Face models, and APIs like SerpAPI and DiffBot, 
-											it ensures transparency and accessibility. 
-									
-								</article>
-								<article>
-									
-									<header>
-										
-										<h2><a href="https://github.com/jshah0428/Wastefree">WasteFree<br /></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/foodwaste.webp" alt="smark " style="width: 80%; height: auto; display: block; margin: 0 auto;" /></a>
-									
-									<p id = "explanation"> 
-									
-										Wastefree helps reduce food waste by tracking pantry items and suggesting ways to use them efficiently. 
-										Using receipt data with our receipt scanner, it monitors expiration dates along with unit economics with our 
-										virual pantry management feature, 
-										and provides popular, tailored meal ideas to minimize waste. 
-										Built with Kivy, Python, SQLite, and Mindee’s OCR, it features a receipt scanner,
-										 manual item management, expiration alerts, and recipe suggestions. 
-										 By promoting sustainability and smarter food use, Wastefree benefits both users and the planet.</p>
-										
-
-										
-								</article>
-								<article>
-									<header>
-										
-										<h2 id = "OCC"></a><a href="https://github.com/jshah0428/GrooveSync">GrooveSync<br /></a></h2>
-										
-									</header>
-									<a href="#" id ="bdal_picture" class="image fit"><img src="images/discoball.jpg" alt="" /></a>
-									<style>
-										#bdal_picture{
-											display: inline-block;
-											margin-top: 15px;
-											width: 80%;
-											height: auto;
-										}
-									</style>
-									
-									
-										<p id = "explanation" class = "disco_text"> 
-									
-											Groove Sync introduces users to the disco era through an interactive, vibrant UI, educational content, and engaging features. 
-											It includes a DiscoAI chatbot, a choose-your-own-adventure game, and Spotify integration for seamless music exploration. 
-											Built with MongoDB Atlas and the Spotify API, Groove Sync blends history, storytelling, and AI to enhance music literacy 
-											and user engagement.
-										<style>
-											.disco_text{
-												margin-top: 80px;
-											}
-										</style>
-									
-								</article>
-									
-
-							
-
-					</div>
-
-				<!-- Footer -->
-				<footer id="footer">
-					<section>
-						<form action="https://api.web3forms.com/submit" method="POST">
-							<div class="fields">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" required />
-								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" required />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="3" required></textarea>
-								</div>
-							</div>
-							<input type="hidden" name="access_key" value="6ddfe1da-90d0-420a-a9d8-35b6c56b2657">
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</section>
-					<!-- <section class="split contact">
-						
-						
-						<section>
-							<h3>Social</h3>
-							<ul class="icons alt">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-					</section> -->
-				</footer>
-
-			<!-- Copyright -->
-				<div id="copyright">
-					<ul><li>&copy; Jainam Shah</li></ul><ul class="icons alt"></ul><ul>
-						<li><a href="https://www.instagram.com/j.shah28/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/jshah0428" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://www.linkedin.com/in/jainamshah0428/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="mailto:jainamshah0428@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <footer class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="kicker">07 / Contact</p>
+          <h2 class="display display-md">Let’s talk.</h2>
+          <div class="contact-links">
+            <a href="mailto:jainamshah0428@gmail.com">jainamshah0428@gmail.com</a>
+            <a href="https://www.linkedin.com/in/jainamshah0428/">LinkedIn</a>
+            <a href="https://github.com/jshah0428">GitHub</a>
+            <a href="https://www.instagram.com/j.shah28/">Instagram</a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="4" required></textarea>
+          </div>
+          <input type="hidden" name="access_key" value="6ddfe1da-90d0-420a-a9d8-35b6c56b2657" />
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="wrap legal">
+        <span>&copy; Jainam Shah</span>
+        <ul class="nav-socials">
+          <li><a href="https://www.instagram.com/j.shah28/" class="fab fa-instagram" aria-label="Instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://github.com/jshah0428" class="fab fa-github" aria-label="GitHub"><span class="label">GitHub</span></a></li>
+          <li><a href="https://www.linkedin.com/in/jainamshah0428/" class="fab fa-linkedin" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:jainamshah0428@gmail.com" class="fas fa-envelope" aria-label="Email"><span class="label">Email</span></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <script src="assets/js/sketchbook.js"></script>
+</body>
 </html>
