@@ -126,6 +126,214 @@ a:hover { color: var(--cobalt); }
 }
 
 /* --------------------------------------------------------------------------
+   Side rails
+   -------------------------------------------------------------------------- */
+
+.side-rail {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  :root { --rail: clamp(6rem, 9vw, 9rem); }
+
+  .wrap {
+    width: min(calc(100% - 2 * var(--rail) - 3rem), var(--max));
+  }
+
+  .wrap-wide {
+    width: min(calc(100% - 2 * var(--rail) - 3rem), var(--max-wide));
+  }
+
+  .side-rail {
+    display: block;
+    position: fixed;
+    top: calc(var(--nav-h) + 2rem);
+    bottom: 2rem;
+    width: var(--rail);
+    z-index: 5;
+    pointer-events: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--graphite);
+  }
+
+  .side-rail-left { left: 0; }
+  .side-rail-right { right: 0; }
+
+  .side-rail::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--line-strong);
+  }
+
+  .side-rail-left::before { right: 1.5rem; }
+  .side-rail-right::before { left: 1.5rem; }
+
+  .rail-ticks {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1.5rem;
+    width: 1.8rem;
+    background:
+      repeating-linear-gradient(to bottom, var(--line-strong) 0 1px, transparent 1px 96px) right / 1.8rem 100% no-repeat,
+      repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px 16px) right / 0.8rem 100% no-repeat;
+  }
+
+  .rail-label {
+    position: absolute;
+    top: 50%;
+    white-space: nowrap;
+  }
+
+  .side-rail-left .rail-label {
+    left: 2.4rem;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center;
+  }
+
+  .side-rail-right .rail-label {
+    right: 2.4rem;
+    transform: translate(50%, -50%) rotate(90deg);
+    transform-origin: center;
+    color: #F4F3EE;
+  }
+
+  .rail-piece {
+    position: absolute;
+    overflow: visible;
+    opacity: 0.9;
+    translate: 0 calc(var(--progress, 0) * var(--drift, 0px));
+  }
+
+  .rail-piece.sway {
+    transform-origin: 50% 0;
+    animation: rail-sway 6s ease-in-out infinite alternate;
+  }
+
+  .rail-piece.float {
+    animation: rail-float 4.5s ease-in-out infinite alternate;
+  }
+
+  .rail-piece.spin {
+    animation: rail-spin 14s linear infinite;
+  }
+
+  .rail-piece.draw path[pathLength] {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: rail-draw 1.8s cubic-bezier(0.6, 0, 0.3, 1) 0.2s forwards;
+  }
+
+  .rail-track {
+    position: absolute;
+    top: 0;
+    bottom: 14rem;
+    left: 1.5rem;
+    width: 1px;
+  }
+
+  .rail-marker {
+    position: absolute;
+    left: -0.45rem;
+    top: calc(var(--progress, 0) * 100%);
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-top: -0.45rem;
+    background: var(--cobalt);
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+}
+
+.page-streamers {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.canvas > main,
+.canvas > .contact {
+  position: relative;
+  z-index: 1;
+}
+
+.streamer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  overflow: visible;
+  opacity: 0.32;
+  translate: 0 calc(var(--progress, 0) * var(--drift, 0px));
+  animation: streamer-reveal 2.4s cubic-bezier(0.6, 0, 0.25, 1) 0.3s both,
+    streamer-bob 9s ease-in-out 2.7s infinite alternate;
+}
+
+.streamer.from-left { --hide: inset(0 100% 0 0); }
+.streamer.from-right { --hide: inset(0 0 0 100%); animation-delay: 0.7s, 3.1s; }
+
+.streamer-flow {
+  stroke-dasharray: 2 26;
+  animation: streamer-flow 3s linear infinite;
+}
+
+.streamer.from-right .streamer-flow { animation-direction: reverse; }
+
+@keyframes streamer-reveal {
+  from { clip-path: var(--hide); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes streamer-bob {
+  from { transform: translateY(-10px); }
+  to { transform: translateY(10px); }
+}
+
+@keyframes streamer-flow {
+  to { stroke-dashoffset: -28; }
+}
+
+@media (max-width: 640px) {
+  .streamer { opacity: 0.2; height: 22vh; }
+}
+
+@keyframes rail-sway {
+  from { rotate: -4deg; }
+  to { rotate: 4deg; }
+}
+
+@keyframes rail-float {
+  from { transform: translateY(-6px) rotate(-3deg); }
+  to { transform: translateY(6px) rotate(3deg); }
+}
+
+@keyframes rail-spin {
+  to { rotate: 360deg; }
+}
+
+@keyframes rail-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .streamer,
+  .streamer-flow,
+  .rail-piece,
+  .rail-piece path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    translate: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
    Type
    -------------------------------------------------------------------------- */
 
@@ -587,18 +795,8 @@ a:hover { color: var(--cobalt); }
    -------------------------------------------------------------------------- */
 
 .experience-reel {
-  --count: 8;
-  height: calc(var(--count) * 92vh);
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.experience-pin {
-  position: sticky;
-  top: var(--nav-h);
-  height: calc(100vh - var(--nav-h));
-  display: flex;
-  align-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 .timeline {
@@ -613,61 +811,29 @@ a:hover { color: var(--cobalt); }
 }
 
 .chapter {
-  grid-area: 1 / 1;
   display: grid;
-  grid-template-columns: minmax(11rem, 16.5rem) minmax(0, 1fr);
-  gap: 2rem 3.25rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 2rem 2.5rem;
   align-items: center;
   position: relative;
-  padding: 0 0 0 2.6rem;
-  min-height: 0;
+  min-height: calc(100vh - var(--nav-h));
+  padding: 0;
   border: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(0.55rem);
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), visibility 0.5s;
-}
-
-.chapter.is-active {
-  opacity: 1;
+  opacity: var(--reveal, 1);
   visibility: visible;
-  pointer-events: auto;
-  transform: none;
-  z-index: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .experience-reel { height: auto; }
-  .experience-pin {
-    position: static;
-    height: auto;
-    display: block;
-  }
-  .timeline { display: block; }
-  .chapter {
-    grid-area: auto;
-    display: grid;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: none;
-    padding: 2.5rem 0 2.5rem 2.1rem;
-    border-top: 1px solid var(--line);
-  }
-  .chapter:first-child { border-top: 0; }
+  will-change: opacity;
 }
 
 .chapter-body {
   position: relative;
   min-width: 0;
-  max-height: calc(100vh - var(--nav-h) - 4rem);
-  overflow: auto;
+  overflow: visible;
+  padding-left: 1.9rem;
 }
 
 .chapter-logo {
   width: 100%;
-  height: 11rem;
+  height: min(34rem, 70vh);
   object-fit: contain;
   object-position: center;
   margin: 0;
@@ -677,13 +843,13 @@ a:hover { color: var(--cobalt); }
 
 .chapter-node {
   position: absolute;
-  left: 0;
-  top: 2.55rem;
-  width: 0.9rem;
-  height: 0.9rem;
+  left: 0.25rem;
+  top: 0.32rem;
+  width: 0.85rem;
+  height: 0.85rem;
   background: var(--ivory);
   border: 1.5px solid var(--charcoal);
-  transform: rotate(45deg);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   z-index: 2;
 }
 
@@ -829,11 +995,22 @@ a:hover { color: var(--cobalt); }
 
 .project {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 2.5rem 3.5rem;
-  padding: 3rem 0;
-  border-top: 1px solid var(--line);
-  align-items: start;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 2rem 2.5rem;
+  padding: 0;
+  border: 0;
+  align-items: center;
+  min-height: calc(100vh - var(--nav-h));
+  opacity: var(--reveal, 1);
+  will-change: opacity;
+}
+
+.project:nth-child(even of .project:not(.no-media)) {
+  direction: rtl;
+}
+
+.project:nth-child(even of .project:not(.no-media)) > * {
+  direction: ltr;
 }
 
 .project.no-media {
@@ -844,11 +1021,16 @@ a:hover { color: var(--cobalt); }
 .project-media {
   position: relative;
   background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-media img {
   width: 100%;
-  max-height: 22rem;
+  height: auto;
+  max-width: 100%;
+  max-height: min(34rem, 70vh);
   object-fit: contain;
 }
 
@@ -1029,7 +1211,8 @@ form.contact-form {
     grid-template-columns: 1fr;
   }
 
-  .project:nth-child(even) { direction: ltr; }
+  .project:nth-child(even of .project:not(.no-media)) { direction: ltr; }
+  .project { align-content: center; gap: 1.25rem; }
   .skill-board { grid-template-columns: 1fr 1fr; }
   .skill-col:nth-child(3n + 2),
   .skill-col:nth-child(3n + 3) {
@@ -1086,11 +1269,12 @@ form.contact-form {
   .chapter {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    padding-left: 2.1rem;
+    padding-left: 0;
     align-items: start;
   }
-  .chapter-logo { height: 5.5rem; }
-  .chapter-body { max-height: calc(100vh - var(--nav-h) - 8.5rem); }
+  .chapter-logo { height: 15rem; }
+  .project-media img { max-height: 15rem; }
+  .chapter { min-height: calc(100vh - var(--nav-h)); align-content: center; }
   .chapter-top { grid-template-columns: 1fr; }
   .chapter-dates { text-align: left; }
   .metrics { gap: 1.1rem 1.5rem; }
