@@ -27,25 +27,49 @@
 
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var chapters = document.querySelectorAll(".chapter");
+  var reel = document.querySelector(".experience-reel");
 
-  if (chapters.length && "IntersectionObserver" in window) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            chapters.forEach(function (chapter) {
-              chapter.classList.remove("is-active");
-            });
-            entry.target.classList.add("is-active");
-          }
-        });
-      },
-      { rootMargin: "-35% 0px -50% 0px", threshold: 0.1 }
-    );
-
+  function activateChapter(target) {
+    if (!target) return;
     chapters.forEach(function (chapter) {
-      observer.observe(chapter);
+      chapter.classList.toggle("is-active", chapter === target);
     });
+  }
+
+  function chapterFromReel() {
+    if (!reel || !chapters.length) return chapters[0];
+    var rect = reel.getBoundingClientRect();
+    var travel = reel.offsetHeight - window.innerHeight;
+    if (travel <= 0) return chapters[0];
+    var scrolled = Math.min(Math.max(-rect.top, 0), travel);
+    var progress = scrolled / travel;
+    var index = Math.min(chapters.length - 1, Math.floor(progress * chapters.length));
+    return chapters[index];
+  }
+
+  if (chapters.length) {
+    var ticking = false;
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        activateChapter(reduce ? chapters[0] : chapterFromReel());
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    activateChapter(reduce ? chapters[0] : chapterFromReel());
+
+    if (reel && location.hash) {
+      var hashed = document.querySelector(location.hash);
+      var index = Array.prototype.indexOf.call(chapters, hashed);
+      if (index >= 0) {
+        var travel = reel.offsetHeight - window.innerHeight;
+        var y = reel.offsetTop + (index / chapters.length) * travel + 8;
+        window.scrollTo(0, y);
+      }
+    }
   }
 
   if (!reduce && "IntersectionObserver" in window) {

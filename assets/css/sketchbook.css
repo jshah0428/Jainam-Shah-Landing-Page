@@ -65,11 +65,6 @@ img {
   display: block;
   background: transparent;
   border: 0;
-  filter: invert(1) hue-rotate(180deg);
-}
-
-.portrait img {
-  filter: none;
 }
 
 a {
@@ -591,29 +586,94 @@ a:hover { color: var(--cobalt); }
    Experience timeline
    -------------------------------------------------------------------------- */
 
+.experience-reel {
+  --count: 8;
+  height: calc(var(--count) * 92vh);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.experience-pin {
+  position: sticky;
+  top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  display: flex;
+  align-items: center;
+}
+
 .timeline {
   position: relative;
   display: grid;
+  width: 100%;
   gap: 0;
 }
 
 .timeline::before {
-  content: "";
-  position: absolute;
-  left: 0.42rem;
-  top: 0.3rem;
-  bottom: 0.3rem;
-  width: 1px;
-  background: var(--line-strong);
+  display: none;
 }
 
 .chapter {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: minmax(11rem, 16.5rem) minmax(0, 1fr);
+  gap: 2rem 3.25rem;
+  align-items: center;
   position: relative;
-  padding: 2.25rem 0 2.75rem 2.6rem;
-  border-top: 1px solid var(--line);
+  padding: 0 0 0 2.6rem;
+  min-height: 0;
+  border: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(0.55rem);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), visibility 0.5s;
 }
 
-.chapter:first-child { border-top: 0; }
+.chapter.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-reel { height: auto; }
+  .experience-pin {
+    position: static;
+    height: auto;
+    display: block;
+  }
+  .timeline { display: block; }
+  .chapter {
+    grid-area: auto;
+    display: grid;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    padding: 2.5rem 0 2.5rem 2.1rem;
+    border-top: 1px solid var(--line);
+  }
+  .chapter:first-child { border-top: 0; }
+}
+
+.chapter-body {
+  position: relative;
+  min-width: 0;
+  max-height: calc(100vh - var(--nav-h) - 4rem);
+  overflow: auto;
+}
+
+.chapter-logo {
+  width: 100%;
+  height: 11rem;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
 
 .chapter-node {
   position: absolute;
@@ -638,16 +698,6 @@ a:hover { color: var(--cobalt); }
   grid-template-columns: minmax(0, 1.15fr) minmax(8rem, 0.55fr);
   gap: 1rem 2rem;
   align-items: start;
-}
-
-.chapter-logo {
-  width: 8.5rem;
-  height: 3.6rem;
-  object-fit: contain;
-  object-position: left center;
-  margin: 0.75rem 0 1rem;
-  padding: 0;
-  background: transparent;
 }
 
 .chapter h2 {
@@ -786,8 +836,10 @@ a:hover { color: var(--cobalt); }
   align-items: start;
 }
 
-.project:nth-child(even) { direction: rtl; }
-.project:nth-child(even) > * { direction: ltr; }
+.project.no-media {
+  grid-template-columns: 1fr;
+  direction: ltr;
+}
 
 .project-media {
   position: relative;
@@ -1031,7 +1083,14 @@ form.contact-form {
 
   .hero-art { display: none; }
   .display-xl { font-size: clamp(3.4rem, 18vw, 5.4rem); }
-  .chapter { padding-left: 2.1rem; }
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-left: 2.1rem;
+    align-items: start;
+  }
+  .chapter-logo { height: 5.5rem; }
+  .chapter-body { max-height: calc(100vh - var(--nav-h) - 8.5rem); }
   .chapter-top { grid-template-columns: 1fr; }
   .chapter-dates { text-align: left; }
   .metrics { gap: 1.1rem 1.5rem; }

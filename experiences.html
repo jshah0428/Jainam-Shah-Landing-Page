@@ -44,249 +44,199 @@
         <p class="lede">A vertical record of companies, roles, dates, and the systems behind them.</p>
       </section>
 
-      <section class="section">
-        <div class="wrap">
+      <section class="section experience-reel" style="--count: 8">
+        <div class="experience-pin wrap wrap-wide">
           <div class="timeline">
 
             <article class="chapter is-active" data-accent="cobalt" id="capital-one">
+              <img class="chapter-logo" src="images/capitalone-logo.svg" alt="Capital One" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 01</p>
                   <h2>Capital One</h2>
                   <p class="role">Software Engineering Intern</p>
-                  <img class="chapter-logo" src="images/c1Picture.png" alt="Capital One" />
                 </div>
-                <p class="chapter-dates">June 2026 - Present</p>
+                <p class="chapter-dates">June 2026 - August 2021</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // architecture</p>
-                <div class="flow">
-                  <span class="node">Product Idea</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">Claude Agents</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">PRD</span>
-                  <span class="node">Technical Specification</span>
-                  <span class="node">Architecture</span>
-                </div>
-                <div class="flow" style="margin-top:0.65rem">
-                  <span class="node">SSE Streaming</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">AWS Lambda</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">DynamoDB</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">RBAC</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>Claude</li>
+                <li>SSE</li>
+                <li>AWS Lambda</li>
+                <li>DynamoDB</li>
+                <li>RBAC</li>
+              </ul>
               <div class="prose">
                 <p>At Capital One, I built a robust LLM platform using parallel Claude agents to transform product ideas into engineer-ready PRDs, technical specifications, and architecture diagrams, reducing spec-validation time by <span class="mark">90%</span>. I also developed SSE streaming pipelines, built AWS Lambda and DynamoDB infrastructure for conversation persistence, and implemented least-privilege RBAC across <span class="mark">50+</span> accounts.</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="magenta" id="prudential">
+              <img class="chapter-logo" src="images/prudential.png" alt="Prudential" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 02</p>
                   <h2>Prudential Financial</h2>
                   <p class="role">Software Engineering Intern</p>
-                  <img class="chapter-logo" src="images/prudential.png" alt="Prudential" />
                 </div>
                 <p class="chapter-dates">September 2025 - December 2025</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // architecture</p>
-                <div class="flow">
-                  <span class="node node-fill">Bedrock Chatbot</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Lambda + boto3</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">EKS</span>
-                  <span class="node">EC2</span>
-                  <span class="node">S3</span>
-                </div>
-                <div class="flow" style="margin-top:0.65rem">
-                  <span class="node">Bedrock Agents</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">MCP Server</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Kubernetes APIs</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Terraform</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>AWS Bedrock</li>
+                <li>Lambda</li>
+                <li>boto3</li>
+                <li>EKS</li>
+                <li>EC2</li>
+                <li>S3</li>
+                <li>MCP</li>
+                <li>Kubernetes</li>
+                <li>Terraform</li>
+              </ul>
               <div class="prose">
                 <p>I designed and implemented an AWS Bedrock powered chatbot using Lambda and boto3 to deliver actionable insights and dynamically create AWS resources, including EKS, EC2, and S3. I also engineered an MCP server that connected Bedrock agents with Kubernetes APIs, enabling automated cluster management and operational support for over <span class="mark">150</span> teams. Additionally, I deployed Bedrock agents and action groups using Terraform, ensuring scalable, secure, and organization-wide accessibility across multiple AWS environments while maintaining consistent infrastructure-as-code practices.</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="tangerine" id="td">
+              <img class="chapter-logo" src="images/td-logo.svg" alt="TD Securities" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 03</p>
                   <h2>TD Securities</h2>
                   <p class="role">Software Engineering Intern</p>
-                  <img class="chapter-logo" src="images/tds.jpeg" alt="TD Securities" />
                 </div>
                 <p class="chapter-dates">June 2025 - August 2025</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // architecture</p>
-                <div class="flow">
-                  <span class="node">REST / ZeroMQ APIs</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">Spring Boot</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Dashboard</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Trade Metrics</span>
-                </div>
-                <div class="flow" style="margin-top:0.65rem">
-                  <span class="node">Regex Analysis</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">~100 mappings</span>
-                  <span class="node">Protobuf</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>Spring Boot</li>
+                <li>REST</li>
+                <li>ZeroMQ</li>
+                <li>Protobuf</li>
+                <li>regex</li>
+              </ul>
               <div class="prose">
                 <p>At TD, I led efforts to streamline risk attribution processes by reducing over 14,000 risk mappings to just ~100 using regex-based pattern recognition and targeted data analysis. Building on this foundation, I developed a robust Spring Boot application to monitor more than 80 critical APIs across REST and ZeroMQ, delivering real-time visibility through a dynamic and actionable user interface. Furthermore, I also created a dashboard to compare trade metrics post curve/code changes to maintain accuracy of previous records. Finally, to ensure scalable and efficient communication across system components, I also utilized Protobuf, enhancing both performance and application modularity.</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="lime" id="codepath">
+              <img class="chapter-logo" src="images/codepath.png" alt="CodePath" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 04</p>
                   <h2>CodePath</h2>
                   <p class="role">Software Engineering Fellow</p>
-                  <img class="chapter-logo" src="images/codepath.png" alt="CodePath" />
                 </div>
                 <p class="chapter-dates">February 2025 - May 2025</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // focus</p>
-                <div class="flow">
-                  <span class="node">Arrays</span>
-                  <span class="node">Linked Lists</span>
-                  <span class="node">Stacks</span>
-                  <span class="node">Trees</span>
-                  <span class="node">Graphs</span>
-                  <span class="node node-fill">Dynamic Programming</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>Arrays</li>
+                <li>Linked Lists</li>
+                <li>Stacks</li>
+                <li>Trees</li>
+                <li>Graphs</li>
+                <li>Dynamic Programming</li>
+              </ul>
               <div class="prose">
                 <p>Participating in CodePath’s Technical Interview Prep (TIP) Course, a rigorous program focused on data structures and algorithms, including arrays, linked lists, stacks, trees, graphs, and dynamic programming. Solving Leetcode-style coding challenges, optimizing for time and space complexity. Engaging in mock interviews to refine problem-solving strategies and technical communication. Strengthening the ability to tackle complex problems, write efficient code, and approach technical interviews with confidence.</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="cyan" id="tech-for-good">
+              <img class="chapter-logo" src="images/Tech For Good_High Quality.png" alt="Tech For Good" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 05</p>
                   <h2>Tech For Good Inc.</h2>
                   <p class="role">Software Engineering Intern</p>
-                  <img class="chapter-logo" src="images/Tech For Good_High Quality.png" alt="Tech For Good" />
                 </div>
                 <p class="chapter-dates">July 2024 – September 2024</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // architecture</p>
-                <div class="flow">
-                  <span class="node">Paper Records</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">EMR · Golang</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Rural Hospitals</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>Golang</li>
+              </ul>
               <div class="prose">
                 <p>Engineered an Electronic Medical Records (EMR) system using Golang, available to rural hospitals in underprivileged areas. This will be pivotal in digitizing patient records (rather than being paper-based), making them increasingly accessible</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="violet" id="bdal">
+              <img class="chapter-logo" src="images/IMG_E8BCC4598E19-1.jpeg" alt="Big Data Analytics Laboratory" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 06</p>
                   <h2>Big Data Analytics Laboratory/Office of Naval Research</h2>
                   <p class="role">Machine Learning Intern</p>
-                  <img class="chapter-logo" src="images/IMG_E8BCC4598E19-1.jpeg" alt="Big Data Analytics Laboratory" />
                 </div>
                 <p class="chapter-dates">February 2024 – December 2024</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // architecture</p>
-                <div class="flow">
-                  <span class="node">US Navy PASS</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">Machine Learning</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Delay Prediction</span>
-                  <span class="node">Resource Allocation</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>Machine Learning</li>
+                <li>Data Science</li>
+              </ul>
               <div class="prose">
                 <p>Enhanced the US Navy’s PASS project with Machine Learning and Data Science to predict ship maintenance delays and optimize resource allocation. Improved model accuracy, reduced predictive errors, and delivered insights from classified data to senior officials, resulting in significant cost savings and better prediction accuracy.</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="yellow" id="saboc">
+              <img class="chapter-logo" src="images/saboc.jpeg" alt="SABOC" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 07</p>
                   <h2>Structural Analysis of Biomedical Ontologies Center</h2>
                   <p class="role">Machine Learning Intern</p>
-                  <img class="chapter-logo" src="images/saboc.jpeg" alt="SABOC" />
                 </div>
                 <p class="chapter-dates">January 2024 – May 2024</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // architecture</p>
-                <div class="flow">
-                  <span class="node">PubMed Citations</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">NumPy / Pandas</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">SDoH Ontology</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">UMLS API</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>UMLS API</li>
+              </ul>
               <div class="prose">
                 <p>Enhanced the analysis of PubMed data by applying NumPy to extract combinations from a vast number of citations, identifying various Social Determinants of Health (SDoH). Utilized NumPy and Pandas to refine the dataset and expand the SDoH ontology. Additionally, employed the UMLS API to gather synonyms from multiple databases, enriching the ontology with semantically similar matches for more comprehensive insights.</p>
+              </div>
               </div>
             </article>
 
             <article class="chapter" data-accent="cobalt" id="investment-fund">
+              <img class="chapter-logo" src="images/download.png" alt="Investment Fund" />
+              <div class="chapter-body">
               <span class="chapter-node" aria-hidden="true"></span>
               <div class="chapter-top">
                 <div>
                   <p class="chapter-id">CH. 08</p>
                   <h2>Investment Fund</h2>
                   <p class="role">Junior Analyst</p>
-                  <img class="chapter-logo" src="images/download.png" alt="Investment Fund" />
                 </div>
                 <p class="chapter-dates">December 2023 - Present</p>
               </div>
-              <div class="schematic">
-                <p class="schematic-label">Note // process</p>
-                <div class="flow">
-                  <span class="node">Industry Research</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node node-fill">DCF Models</span>
-                  <span class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 28 10"><path d="M1 5h22" stroke="currentColor" stroke-width="1"/><path d="M19 1l6 4-6 4" fill="none" stroke="currentColor" stroke-width="1"/></svg></span>
-                  <span class="node">Fortune 500</span>
-                </div>
-              </div>
+              <ul class="stack">
+                <li>DCF</li>
+              </ul>
               <div class="prose">
                 <p>Developed discounted cash flow (DCF) models for a range of Fortune 500 companies to assess their financial health and investment potential. Conducted in-depth research across various industries to stay current with emerging trends and market dynamics, ensuring a comprehensive evaluation of investability and financial stability.</p>
+              </div>
               </div>
             </article>
 
